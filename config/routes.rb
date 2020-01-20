@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :challenges
+  resources :users do
+    get :get_fb_user
+  end
 
 end
