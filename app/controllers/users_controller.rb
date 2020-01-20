@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         end
         
         if user
-            render status:200, json: {:user=>UserSerializer.new(user).serialized_json}
+            render status:200, json: UserSerializer.new(user).serialized_json
         else
             render status:404, json: {:error => "User Not Found"}
         end
